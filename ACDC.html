@@ -8,11 +8,11 @@
 <body>
     <h1><p>AC/DC</p></h1>
     <ul>
-  <li><a href="">История</a></li>
-  <li><a href="">Участники</a></li>
-  <li><a href="">Дискография</a></li>
-  <li><a href="">Галерея</a></li>
-  <li><a href="">Контакты</a></li>
+  <li><a href="#История">История</a></li>
+  <li><a href="#Участники">Участники</a></li>
+  <li><a href="#Дискография">Дискография</a></li>
+  <li><a href="#Галерея">Галерея</a></li>
+  <li><a href="#Контакты">Контакты</a></li>
 </ul>
 
 <h2><p>Австралийская рок-легенда</p></h2>
@@ -32,11 +32,11 @@
 "AC/DC — одна из величайших рок-групп всех времен" — Rolling Stone
 </blockquote>
 
-<h2>
-    История группы
+<h2 id = 'История'>
+      История группы
 </h2>
 <h3>
-    Ранние годы (1973-1977)
+    Ранние годы (1973-1977) 
 
 </h3>
 <p>
@@ -79,19 +79,27 @@
 
 </p>
 
-<h2>
+<h2 id="Участники">
     Участники группы
 
 </h2>
 
 <table border="1" cellpadding="8" cellspacing="0" width="70%">
     <caption><b>Текущий состав группы</b></caption>
+    <tfoot>
+    <tr>
+        <td colspan="3" align="left">* Состав может меняться</td>
+    </tr>
+    </tfoot>
+    <thead>
     <tr bgcolor="#f2f2f2">
         <th>Имя</th>
         <th>Роль</th>
         <th>Период участия</th>
     </tr>
-    <tr>
+    </thead>
+    <tbody>
+        <tr>
         <td>Ангус Янг</td>
         <td>Соло-гитара</td>
         <td>1973-настоящее время</td>
@@ -116,9 +124,8 @@
         <td>Ударные</td>
         <td>1975-1983, 1994-2015, 2018-настоящее время</td>
     </tr>
-    <tr>
-        <td colspan="3" align="left">* Состав может меняться</td>
-    </tr>
+    </tbody>
+
 </table>
 
 <h3>
@@ -133,12 +140,12 @@
   <li><p>Саймон Райт (ударные, 1983-1989)</p></li>
 </ul>
 
-<h2>
+<h2 id="Дискография">
     Дискография
 </h2>
 
 <ol>
-  <li>&#9654; High Voltage (1975)
+  <li><details> <summary>High Voltage (1975)</summary>
     <p>Первый международный альбом группы, содержавший лучшие треки с двух австралийских<br>
          релизов.</p>
     <ul type="circle">
@@ -146,21 +153,22 @@
       <li>T.N.T.</li>
       <li>High Voltage</li>
     </ul>
-  </li>
+  </li></details>
 
-  <li>&#9654; Highway to Hell (1979)
+  <li><details> 
+    <summary>Highway to Hell (1979)</summary>
     <p>Последний альбом с Боном Скоттом, принесший группе международную известность.</p>
-  </li>
+  </li></details>
 
-  <li>&#9654; Back in Black (1980)
+  <li><details> <summary>Back in Black (1980)</summary>
     <p>Один из самых продаваемых альбомов в истории музыки, записанный с новым вокалистом<br>
          Брайаном Джонсоном.</p>
-  </li>
+  </li></details>
 
-  <li>&#9654; For Those About to Rock (We Salute You) (1981)
+  <li><details> <summary>For Those About to Rock (We Salute You) (1981)</summary>
     <p>Первый альбом AC/DC, достигший первого места в чарте Billboard 200.</p>
   </li>
-</ol>
+</ol></details>
 
 <h3>
     Самые известные песни
@@ -176,7 +184,7 @@
     Highway to Hell (предпросмотр)
 </p>
 
-<h2>
+<h2 id="Галерея">
     Галерея
 </h2>
 
@@ -202,16 +210,108 @@
     Свяжитесь с нами
 </h2>
 
+<form>
+        <fieldset>
+            <legend>Форма обратной связи</legend>
+            
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" placeholder="Введите ваше имя">
+            <br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="example@mail.com">
+            <br><br>
+            
+            <label for="message">Сообщение:</label><br>
+            <textarea id="message" placeholder="Введите ваше сообщение" rows="4" cols="50"></textarea>
+            <br><br>
+            
+            <label for="country">Страна:</label>
+            <select id="country">
+                <option>Россия</option>
+                
+            </select>
+            <br><br>
+            
+            <label for="favorite-album">Любимый альбом AC/DC:</label>
+            <input type="text" id="favorite-album">
+            <br><br>
+            
+            <p>Как вы узнали о группе?</p>
+            <input type="radio" id="friends" name="source">
+            <label for="friends">От друзей</label>
+            <input type="radio" id="media" name="source">
+            <label for="media">Из СМИ</label>
+            <input type="radio" id="concert" name="source">
+            <label for="concert">На концерте</label>
+            <br><br>
+            
+            <p>Какие аспекты группы вас интересуют?</p>
+            <input type="checkbox" id="music">
+            <label for="music">Музыка</label>
+            <input type="checkbox" id="history">
+            <label for="history">История</label>
+            <input type="checkbox" id="merch">
+            <label for="merch">Мерч</label>
+            <br><br>
+            
+            <input type="submit" value="Отправить">
+            <input type="reset" value="Очистить">
+        </fieldset>
+    </form>
 
-<h3>
+<h3 id="Контакты">
     Контакты
 </h3>
 
 <p>
     <em>
         Официальный фан-клуб AC/DC<br>
-        Email: <a href="mailto:fanclub@acdc.com"></a>
+        Email: <a href="fanclub@acdc.com">fanclub@acdc.com</a><br>
+        Веб-сайт: <a href="www.acdc.com">www.acdc.com</a>
     </em>
+
+</p>
+<h3>
+    Карта концертов
+</h3>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.259972322305!2d-73.9878584845943!3d40.74844007932791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2593b48f9f1b7%3A0x88f6a5b9e0f1b2d!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1678912345678!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<h3>
+    Интересные факты
+
+</h3>
+<p>
+    Ангус Янг всегда выступает в школьной форме, которую носил в реальной школе.
+
+</p>
+<p>
+    Группа продала более 200 миллионов альбомов по всему миру.
+
+</p>
+<h3>
+    Ближайшие концерты
+
+</h3>
+
+<ul>
+  <li>15 октября 2023 - Лондон, Великобритания</li>
+  <li>2 ноября 2023 - Нью-Йорк, США</li>
+  <li>20 ноября 2023 - Сидней, Австралия</li>
+</ul>
+
+<p>
+    © 2023 AC/DC Fan Page. Все права защищены.
+</p>
+<p>
+    Эта страница создана для образовательных целей.
+
+</p>
+
+<a href="#top">Вернуться наверх</a><br><br>
+<progress id="file" value="75" max="100"> 32% </progress>
+<p>
+    Прогресс заполнения страницы
 </p>
 </body>
 </html>
